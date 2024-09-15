@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>retro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script
+      src="https://kit.fontawesome.com/53e3e33164.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-5xl font-bold">ReTro</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <div tooltip="asdf" class="w-10 rounded-full">
+              <i class="fa-solid fa-user-plus text-4xl mx-6"></i>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar ml-8"
+            >
+              <div class="w-10 rounded-full">
+                <i class="fa-solid fa-house text-4xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container mx-auto">
+      <div
+        class="flex items-center min-h-screen bg-indigo-900 my-10 rounded-2xl"
+        style="
+          background-image: url(images/bgbanner.png);
+          background-position: bottom ;
+          background-size: cover;
+        "
+      >
+        <div class="grid grid-cols-2 p-14 ">
+         <div class="space-y-8">
+          <h1 class="text-7xl text-white font-bold w-[40rem]">Welcome to the <span class="text-indigo-200"> Retro</span>
+            Forum</h1>
+          <p class="text-white">Share your favorite opinion and win and wp
+            forum coffee mug!</p>
+          <div>
+            <input class="py-3 rounded-lg px-3 pr-7" placeholder="sharch here anything" type="text">
+            <button class="btn btn-primary">Search</button>
+          </div>
+         </div>
+
+         <div class="bg-white rounded-2xl space-y-4 p-5">
+          <div class="flex justify-between text-3xl">
+            <span>Registered Users</span>
+            <span>01</span>
+          </div>
+          <div class="flex justify-between text-3xl">
+            <span>Forum</span>
+            <span>01</span>
+          </div>
+          <div class="flex justify-between text-3xl">
+            <span>Topics</span>
+            <span>01</span>
+          </div>
+          <div class="flex justify-between text-3xl">
+            <span>Replies</span>
+            <span>01</span>
+          </div>
+
+         </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- lets discuss section start -->
+
+    <section class="container mx-auto">
+      <!-- textpart -->
+      <div class="text-center space-y-5">
+        <h1 class="text-5xl font-bold">Let’s Discuss</h1>
+        <p>Yes, you can run unit tests and view the results directly within the app. The
+          integrated testing features allow for a streamlined </p>
+      </div>
+
+      <!-- dinamic data part  -->
+       <div class="grid grid-cols-6 gap-5 min-h-screen mt-10">
+        <!-- card contianer  -->
+        <div id="parentDiv" class="col-span-4 space-y-4 rounded-3xl ">
+          
+        </div>
+
+        <!-- title card -->
+        <div id="titleparent" class="col-span-2 bg-gray-300 rounded-3xl space-y-4 max-h-[200vh] overflow-scroll">
+          <div  class="flex justify-between w-11/12 mx-auto mt-7">
+            <p class="font-bold text-gray-600">Title</p>
+            <p>mark as read <span id="theCount">0</span></p>
+          </div>
+          <!-- the value -->
+          
+        </div>
+
+       </div>
+
+     </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
