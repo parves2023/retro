@@ -45,7 +45,7 @@
 
     <section class="container mx-auto">
       <div
-        class="flex items-center min-h-screen bg-indigo-900 my-10 rounded-2xl"
+        class="flex items-center bg-indigo-900 my-10 rounded-2xl py-10"
         style="
           background-image: url(images/bgbanner.png);
           background-position: bottom ;
@@ -59,8 +59,8 @@
           <p class="text-white">Share your favorite opinion and win and wp
             forum coffee mug!</p>
           <div>
-            <input class="py-3 rounded-lg px-3 pr-7" placeholder="sharch here anything" type="text">
-            <button class="btn btn-primary">Search</button>
+            <input id="categorySearch" class="py-3 rounded-lg px-3 pr-7" placeholder="sharch here anything" type="text">
+            <button onclick="searchByCategory()" class="btn btn-primary">Search</button>
           </div>
          </div>
 
@@ -99,14 +99,17 @@
       </div>
 
       <!-- dinamic data part  -->
-       <div class="grid grid-cols-6 gap-5 min-h-screen mt-10">
+       <div class="grid grid-cols-6 gap-5  mt-10">
         <!-- card contianer  -->
         <div id="parentDiv" class="col-span-4 space-y-4 rounded-3xl ">
+          <div id="loadingSpinner" class="loading loading-ring loading-lg mx-auto" style="display: none;">
+            
+          </div>
           
         </div>
 
         <!-- title card -->
-        <div id="titleparent" class="col-span-2 bg-gray-300 rounded-3xl space-y-4 max-h-[200vh] overflow-scroll">
+        <div id="titleparent" class="col-span-2 bg-gray-300 rounded-3xl space-y-4  overflow-scroll">
           <div  class="flex justify-between w-11/12 mx-auto mt-7">
             <p class="font-bold text-gray-600">Title</p>
             <p>mark as read <span id="theCount">0</span></p>
@@ -118,6 +121,39 @@
        </div>
 
      </section>
+
+
+
+     <div id="contentWrapper" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      <!-- Cards will be injected here -->
+    </div>
+
+
+
+<section class="container mx-auto my-16 ">
+  <footer class="footer bg-neutral text-neutral-content p-10 rounded-xl">
+    <nav>
+      <h6 class="footer-title">Services</h6>
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Company</h6>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav>
+    <nav>
+      <h6 class="footer-title">Legal</h6>
+      <a class="link link-hover">Terms of use</a>
+      <a class="link link-hover">Privacy policy</a>
+      <a class="link link-hover">Cookie policy</a>
+    </nav>
+  </footer>
+</section>
 
     <script src="js/script.js"></script>
   </body>
